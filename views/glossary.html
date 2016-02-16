@@ -1,0 +1,32 @@
+<style>.highlighted { background: yellow}</style> <div ng-controller="GlosCtrl"> <div class="jumbotron"> <a href="http://www.mass.gov/eea/grants-and-tech-assistance/guidance-technical-assistance/agencies-and-divisions/doer/" target="_blank"><img class="img-responsive logo" src="images/doer_logo1.6d944cb0.png" alt="Common Wealth of Massachussets"> </a> <br> <!-- <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="navbar-left">
+                        <a href="http://www.mass.gov/eea/grants-and-tech-assistance/guidance-technical-assistance/agencies-and-divisions/doer/" target="_blank"><img class="img-responsive logo" src="images/DOER_JPEG_300dpi.0a0d3826.jpg" alt="DOER logo"> </a>
+                    </li>
+                </ul>
+                 <ul class="nav navbar-nav ">
+               <h2 style="padding-top:20px;color:#337ab7">Massachusetts Energy Ally<br/>
+               <span style="marigin-left:30px"><h4 style="margin-left:80px"><em>Access all your energy incentives here</em></h4></span></h2>
+                </ul>
+                 <ul class="nav navbar-nav ">
+               <h3 style="padding-top:20px;color:#337ab7">Massachussets Energy Incentive and rebate</h3>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-right">
+                    </li>
+                        <a href="http://www.mass.gov/eea/grants-and-tech-assistance/guidance-technical-assistance/agencies-and-divisions/doer/" target="_blank"><img class="img-responsive logo" src="images/Logo1.fdcb0413.png" alt="Common Wealth of Massachussets" > </a></li>
+                </ul>
+            </div>--> <div class="menu"> <a class="menu-link" href="#/" style="color:#004B8E;margin-left:15px" title="HomePage">Home <span>&nbsp;|</span></a> <a class="menu-link" style="color:#004B8E" ng-href="#/about" title="About tool program">About</a> <a class="menu-link" style="float:right;color:#004B8E;margin-right:15px" ng-href="#/contact" title=" Contact Information">Contact</a> <a class="menu-link" style="float:right;color:#004B8E" ng-href="#/FAQs" title="FAQs related to program">FAQs<span>&nbsp;|&nbsp;</span></a> <a class="menu-link" ng-href="#/glossary" style="float:right;color:#004B8E" title="Glossary Page" id="g1">Glossary<span>&nbsp;|&nbsp;</span></a> </div> </div> <div class="row marketing" style="margin-top:10px;margin-bottom:30px;margin-left:40px;margin-right:40px"> <br> <form style="float:right"> <div class="form-group"> <div class="input-group pull-right"> <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div> <input type="text" class="form-control" placeholder="Search for..." ng-model="search.text"> </div> </div> </form> <!--    <div style="float:right"><b>Search Keyword &nbsp;</b> <input type="text" placeholder="Search" ng-model="search.text"></div>--> <br> <br> <h3><b>FUEL SOURCE TERM GLOSSARY</b></h3> <p></p> <h4>Below we have provided the definitions for fuel source terms commonly used to describe certain types of energy and their components.</h4> <!-- filter code --> <div ng-repeat="item in data | filter:search.text" ng-bind-html="item.text | highlight:search.text"> </div> <p>U.S. Energy Adminstration,Energy Explained:&nbsp;<a href="http://www.eia.gov/energyexplained/index.cfm">http://www.eia.gov/energyexplained/index.cfm</a></p> <!--<ul class="glosary-terms">
+		<li><em class="title">Biomass</em> – in the context of energy, often used to describe plant based material.</li>
+		<li><em class="title">Geothermal</em> – heat (thermal) derived from the Earth (geo).</li> 
+		<li><em class="title">Fuel Cell</em> – an electrochemical generator that produces a continuous electric current directly from the chemical reaction between Oxygen and Hydrogen.</li>  
+		<li><em class="title">Hydroelectric</em> – the generation of power derived from the energy of falling water or any other hydraulic source.</li> 
+		<li><em class="title">HVAC</em> – is an acronym for Heating, Ventilation, and Air Conditioning. This system is used to provide heating and cooling services to buildings. This all-inclusive system has become the industrial standard for construction of new buildings.  </li>
+		<li><em class="title">Insulation</em> – is a material that prevents the transmission of heat, electricity, moisture, sound, and shock from one medium to another</li>
+		<li><em class="title">Natural Gas</em> – is a fossil fuel that is formed when layers of buried plants and gases and are exposed </li>
+		<li><em class="title">Organics</em> – is energy generated organic material, in the form of biogas, that is able to be safely and reliably recycled from wet organic materials using a natural process called Anaerobic (no air) digestion. </li>
+		<li><em class="title">Photovoltaic</em> – is a method for generating electric power by the use of solar cells to convert energy from the sun into a flow of electrons.</li>
+		<li><em class="title">Solar</em> – relates to the Sun emitting light. Solar utilizes the Sun’s energy to produce heat or electricity</li>
+		<li><em class="title">Wind</em> – power derived from wind; used to generate mechanical or electrical power</li>
+		<li><em class="title">Wood</em> – arises from many sources including forests, co-products from wood processing, processed wood-based fuels and post-consumer recovered wood. </li>
+	</ul>--> </div> </div>
